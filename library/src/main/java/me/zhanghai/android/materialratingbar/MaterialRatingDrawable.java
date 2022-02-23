@@ -21,15 +21,15 @@ public class MaterialRatingDrawable extends LayerDrawable {
     public MaterialRatingDrawable(Context context, boolean fillBackgroundStars) {
         super(new Drawable[] {
                 createLayerDrawableWithTintAttrRes(fillBackgroundStars ?
-                        R.drawable.mrb_star_icon_black_36dp
+                        R.drawable.mrb_star_round_filled
                         : R.drawable.mrb_star_border_icon_black_36dp, fillBackgroundStars ?
                         R.attr.colorControlHighlight : R.attr.colorControlNormal, context),
                 fillBackgroundStars ? createClippedLayerDrawableWithTintColor(
-                        R.drawable.mrb_star_icon_black_36dp, Color.TRANSPARENT, context)
+                        R.drawable.mrb_star_round_filled, Color.TRANSPARENT, context)
                         : createClippedLayerDrawableWithTintAttrRes(
                         R.drawable.mrb_star_border_icon_black_36dp, R.attr.colorControlActivated,
                         context),
-                createClippedLayerDrawableWithTintAttrRes(R.drawable.mrb_star_icon_black_36dp,
+                createClippedLayerDrawableWithTintAttrRes(R.drawable.mrb_star_round_filled,
                         R.attr.colorControlActivated, context)
         });
 
